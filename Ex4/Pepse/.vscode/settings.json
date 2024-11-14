@@ -1,0 +1,8 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Projects\\Oryan-Hassidim\\67125-OOP\\DanoGameLab 1.1.0 17.10.23\\DanoGameLab.jar"
+    ]
+}

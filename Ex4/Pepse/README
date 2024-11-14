@@ -1,0 +1,24 @@
+oryan.hassidim
+319131579
+
+1.  The package contains two classes: Flora and Fruit.
+    •   Flora Class: This is the main class and includes a utility for creating trees.
+        It also maps trees to a list of their leaves and list of their fruits.
+    •   Fruit Class: An auxiliary class representing fruit. In reality, when a person eats fruit,
+        they are the one consuming it. There’s an interface between the person and the fruit,
+        where the fruit provides energy to the person. After consumption, the fruit disappears from
+        the world. This concept is implemented in the code using an interface called Food, which every
+        consumable item must implement. The person identifies whether what they encounter is food,
+        based on their own definition. If we had a dog in the game, we’d define an interface for 
+        dangerous things, and anything dangerous would need to implement it.
+2.  Naturally, the Flora class depends on the Fruit class.
+3.  Design Patterns:
+    •  Observer Pattern:
+        All trees, leaves, and fruits react to jumping. They are registered for the event of the avatar’s
+        state change due to jumping.
+        Why didn’t I directly register them to the avatar’s event? Because real-world fruits don’t react
+        to my jumps. There’s no such connection. This also means we don’t know what we’d do if there were
+        two avatars. Would we react to both? Is there a primary avatar? If so, it implies a global state
+        where the avatar determines and everyone reacts (the GameState).
+    •  Dependency Inversion:
+        Used for application dependencies, such as the GroundManager or the Seed.
